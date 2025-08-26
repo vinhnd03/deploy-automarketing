@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: auto-marketing-server
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - fromEnvVar: DB_URL
+      - fromEnvVar: DB_USER
+      - fromEnvVar: DB_PASSWORD
+      - fromEnvVar: CLOUDINARY_CLOUD_NAME
+      - fromEnvVar: CLOUDINARY_API_KEY
+      - fromEnvVar: CLOUDINARY_API_SECRET
+      - fromEnvVar: EMAIL
+      - fromEnvVar: EMAIL_APP_PASSWORD
+      - fromEnvVar: FACEBOOK_CLIENT_ID
+      - fromEnvVar: FACEBOOK_CLIENT_SECRET
+      - fromEnvVar: GOOGLE_CLIENT_ID
+      - fromEnvVar: GOOGLE_CLIENT_SECRET
+      - fromEnvVar: OPENAI_API_KEY
